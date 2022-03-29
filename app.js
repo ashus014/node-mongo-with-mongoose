@@ -16,4 +16,39 @@ const fruit = new Fruit({
     review: "Pretty solid as a fruit."
 });
 
-fruit.save();
+const kiwi = new Fruit({
+    name: "Kiwi",
+    rating: 9,
+    review: "The best fruit."
+});
+
+const orange = new Fruit({
+    name: "Orange",
+    rating: 10,
+    review: "Nothing else required."
+});
+
+const banana = new Fruit({
+    name: "Banana",
+    rating: 3,
+    review: "Full of calcium."
+});
+
+
+// Fruit.insertMany([kiwi, orange, banana], function(err){
+//     if(err){
+//         console.log(err);
+//     }
+//     else{
+//         console.log("Successful Insertion");
+//     }
+// });
+
+Fruit.find(function(err, fruits){
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log(fruits);
+    }
+});
