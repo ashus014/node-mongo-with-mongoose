@@ -23,7 +23,7 @@ const fruit = new Fruit({
     review: "Don't like this fruit."
 });
 
-fruit.save();
+//fruit.save();
 
 
 // const kiwi = new Fruit({
@@ -69,3 +69,13 @@ fruit.save();
 //     }); 
     
 // });
+
+Fruit.updateOne({_id: "6245354e7a11b43470d924d0"}, {name: "Peach"}, function(err){
+
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log("Updated successfully")
+    }
+});
