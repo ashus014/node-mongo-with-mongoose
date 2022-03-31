@@ -70,12 +70,22 @@ const fruit = new Fruit({
     
 // });
 
-Fruit.updateOne({_id: "6245354e7a11b43470d924d0"}, {name: "Peach"}, function(err){
+// Fruit.updateOne({_id: "6245354e7a11b43470d924d0"}, {name: "Peach"}, function(err){
+
+//     if(err){
+//         console.log(err);
+//     }
+//     else{
+//         console.log("Updated successfully")
+//     }
+// });
+
+Fruit.deleteOne({name: "Apple"}, function(err){
 
     if(err){
         console.log(err);
     }
     else{
-        console.log("Updated successfully")
+        console.log("Deleted successfully")
     }
 });
